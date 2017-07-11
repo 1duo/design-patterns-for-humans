@@ -168,7 +168,7 @@ abstract class HiringManager
 {
 
     // Factory method
-    abstract public function makeInterviewer(): Interviewer;
+    abstract protected function makeInterviewer(): Interviewer;
 
     public function takeInterview()
     {
@@ -182,7 +182,7 @@ Now any child can extend it and provide the required interviewer
 ```php
 class DevelopmentManager extends HiringManager
 {
-    public function makeInterviewer(): Interviewer
+    protected function makeInterviewer(): Interviewer
     {
         return new Developer();
     }
@@ -190,7 +190,7 @@ class DevelopmentManager extends HiringManager
 
 class MarketingManager extends HiringManager
 {
-    public function makeInterviewer(): Interviewer
+    protected function makeInterviewer(): Interviewer
     {
         return new CommunityExecutive();
     }
@@ -792,7 +792,8 @@ class Developer implements Employee
 {
     protected $salary;
     protected $name;
-
+    protected $roles;
+    
     public function __construct(string $name, float $salary)
     {
         $this->name = $name;
@@ -824,6 +825,7 @@ class Designer implements Employee
 {
     protected $salary;
     protected $name;
+    protected $roles;
 
     public function __construct(string $name, float $salary)
     {
@@ -890,7 +892,7 @@ $organization = new Organization();
 $organization->addEmployee($john);
 $organization->addEmployee($jane);
 
-echo "Net salaries: " . $organization->getNetSalaries(); // Net Salaries: 22000
+echo "Net salaries: " . $organization->getNetSalaries(); // Net Salaries: 27000
 ```
 
 ☕ Decorator
