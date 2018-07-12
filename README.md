@@ -11,10 +11,6 @@ A topic that can easily make anyone's mind wobble. Here I try to make them stick
 
 ***
 
-<p align="center"><b>👋 You might be interested in ES Guy – Weekly booklet on Frontend Development </b><br> <a href="http://esguy.com">Read the details and Subscribe here</a></p>
-
-***
-
 <sub>Check out my [blog](http://kamranahmed.info) and say "hi" on [Twitter](https://twitter.com/kamranahmedse).</sub>
 
 🚀 Introduction
